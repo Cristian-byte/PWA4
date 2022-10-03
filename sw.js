@@ -23,7 +23,7 @@
     }
 });*/
 
-self.addEventListener('fetch', event => {
+/*self.addEventListener('fetch', event => {
 
     if (event.request.url.includes('style.css')) {
         let respuesta = new Response(`
@@ -38,5 +38,15 @@ self.addEventListener('fetch', event => {
         });
 
         event.respondWith(respuesta);
+    }
+});*/
+
+self.addEventListener('fetch', event => {
+    if (event.request.url.includes('main.jpg')) {
+
+        //event.respondWith(fetch('img/main-patas-arriba.jpg'));
+
+        let resp = fetch('img/main-patas-arriba.jpg');
+        event.respondWith(resp);
     }
 });
